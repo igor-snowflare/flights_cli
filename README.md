@@ -1,7 +1,7 @@
 # Flight CLI
 *A small Go project that was primarily created as a practice for using third party APIs to obtain data to be used within Go projects*
 
-[!Screenshot Example](screenshots/screenshot_example.png)
+![Screenshot Example](screenshots/screenshot_example.png)
 
 ## Data Sources
 
