@@ -1,0 +1,19 @@
+[
+	{
+		"name":"Seychelles",
+		"flag":"🇸🇨",
+		"airport_code":"SEZ"
+	},
+
+	{
+		"name":"Mauritius",
+		"flag":"🇲🇺",
+		"airport_code":"MRU"
+	},
+
+	{
+		"name":"Zimbabwe",
+		"flag":"🇿🇼",
+		"airport_code":"HRE"
+	}
+]
