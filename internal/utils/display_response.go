@@ -30,6 +30,7 @@ func DisplayResponse(destination Destination, responseHelper ResponseHelper, cur
 		fmt.Printf("\n🛫 Departing from %s at %s", firstDeparture.Name, firstDeparture.Time)
 		fmt.Printf("\n🛬 Arriving to %s at %s", lastArrival.Name, lastArrival.Time)
 		fmt.Printf("\n⏱️ Total Travel Time: %d hours %d minutes", durationHours, durationMinutes)
+		fmt.Printf("\n🛩️ Total Flights: %d", len(travelOption.Flights))
 		fmt.Printf("\n💰 Cost: %d %s", travelOption.Price, currency)
 
 		fmt.Println("")
