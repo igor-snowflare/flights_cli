@@ -1,6 +1,8 @@
 # Flight CLI
 *A small Go project that was primarily created as a practice for using third party APIs to obtain data to be used within Go projects*
 
+[!Screenshot Example](screenshots/screenshot_example.png)
+
 ## Data Sources
 
 The project relies on Google Flights data as provided by SERPAPI's wrapper. Thre free account alows for 250 montly searches which is more than enough for testing the basic functionalities and using the app for private use.

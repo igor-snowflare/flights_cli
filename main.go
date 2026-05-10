@@ -1,12 +1,13 @@
 package main
 
 import (
-	"os"
-	"log"
 	"fmt"
+	"log"
+	"os"
 	"time"
-	"github.com/joho/godotenv"
+
 	"github.com/igor-snowflare/flights_cli/internal/utils"
+	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -17,6 +18,7 @@ func main() {
 	}
 
 	apiKey := os.Getenv("API_KEY")
+	currency := os.Getenv("CURRENCY")
 
 	destinationData, err := os.ReadFile("destinations.json")
 
@@ -35,7 +37,7 @@ func main() {
 	fmt.Println("🔍 Looking for flights departing on", departureDate)
 
 	for _, parsedDestination := range parsedDestinations {
-		response := utils.SendRequest(apiKey, os.Getenv("ORIGIN_CODE"), parsedDestination, departureDate, os.Getenv("CURRENCY"))
+		response := utils.SendRequest(apiKey, os.Getenv("ORIGIN_CODE"), parsedDestination, departureDate, currency)
 
 		formatted_response, err := utils.ParseResponse(response)
 
@@ -43,6 +45,6 @@ func main() {
 			log.Fatal("Failed to parse the upstream JSON response")
 		}
 
-		utils.DisplayResponse(parsedDestination, formatted_response)
+		utils.DisplayResponse(parsedDestination, formatted_response, currency)
 	}
 }
